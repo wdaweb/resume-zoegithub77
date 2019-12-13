@@ -1,0 +1,52 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../image/light1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: var(--font-family-sans-serif), 'Microsoft JHengHei';    
+}
+.carousel-item{
+    height: 500px;
+}
+.carousel-caption{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+.object-fit{
+    object-fit: cover;
+    object-position: center;
+}
+.coffee>div:first-child{
+    height: 350px;
+}
+#footer i{
+    /* 1 rem= 16 px */
+    font-size: 1.5rem;
+}
+#loading {
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+}
+#content, #footer{
+    display: none;
+}
+/* 媒體查詢:依各種不同斷點調整 */
+@media(max-width: 576px){
+    .carousel-item{
+        height: 300px !important;
+    }
+}
+    /*當螢幕寬>768px  */
+@media (min-width: 768px){
+   /* 圖文左右交叉排序 */
+    .coffee:nth-child(even)>div:first-child{
+        order: 2;
+    }
+    .coffee:nth-child(even)>div:last-child{
+        order: 1;
+        text-align: right;
+    }
+}
